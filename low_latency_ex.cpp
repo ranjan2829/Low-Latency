@@ -18,7 +18,17 @@ class TradingSystem{
         auto end=high_resolution_clock::now();
         auto duration=duration_cast<microseconds>(end-start);
         cout<<"time"<<duration.count<<endl;
-        
+
     }
+
+    private :
+        QuantStrategy;
+};
+int main(){
+    TradingSystem trading;
+    trading.run();
+    return 0;
 }
+
+
 
