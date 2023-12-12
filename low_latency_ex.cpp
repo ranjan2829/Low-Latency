@@ -9,4 +9,16 @@ class QuantStrategy{
     }
 
 };
+class TradingSystem{
+    public:
+    TradingSystem():strategy(){}
+    void run(){
+        auto start=high_resolution_clock::now();
+        strategy.execute();
+        auto end=high_resolution_clock::now();
+        auto duration=duration_cast<microseconds>(end-start);
+        cout<<"time"<<duration.count<<endl;
+        
+    }
+}
 
